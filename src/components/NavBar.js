@@ -5,11 +5,12 @@ function NavBar() {
 
   return (
     <nav>
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
+      {links.map((link)=>(
+        <a key={link} href={`#${link}`}>
+          {link}
+        </a>
+      ))}
     </nav>
-  )
+  );
 }
-
 export default NavBar;
